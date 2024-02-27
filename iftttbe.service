@@ -1,0 +1,15 @@
+[Unit]
+Description=IFTTT to OpenHAB
+After=network.target
+
+[Service]
+Type=simple
+User=openhab
+Group=openhab
+WorkingDirectory=/opt/iftttbe/daemon
+ExecStart=/opt/iftttbe/daemon/daemon.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
